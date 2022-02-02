@@ -48,7 +48,7 @@ b_o=270.0
 error=15.0
 eta=0.001 # 学習係数
 lmbda=0.5 # 忘却係数
-N=50000    # データ数
+N=5000    # データ数
 
 
 px=[]
@@ -65,7 +65,7 @@ Qbeta=0.0
 Qb=0.0
 alpha=50
 beta=1.00
-b=b_o+200
+b=b_o+50
 
 alpha_best=alpha
 beta_best=beta
