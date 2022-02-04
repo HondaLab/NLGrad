@@ -1,7 +1,11 @@
 # NLGrad
-Gradient decent method for Non-Linear model
+Online learning in Gradient method for Non-Linear model function.
+$\lambda$ is forgetting factor and the vale is set 0.5 as typical case.
 
-nlgrad4a.py
+$Q' = \lambda Q + (f(x_i)-y_i)^2$
+
+## nlgrad4a.py
+
 alpha=(1-eta*Qalpha)
 beta=(1-eta*Qbeta)
 b=(1-eta*Qb)
