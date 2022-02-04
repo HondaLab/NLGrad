@@ -6,6 +6,8 @@ alpha=(1-eta*Qalpha)
 beta=(1-eta*Qbeta)
 b=(1-eta*Qb)
 
+https://github.com/HondaLab/NLGrad/blob/honda/pics/sample4a.png
+
 gradd3a.py
 最急降下法でtanh関数のパラメータをオンライン学習する
 x:説明変数を一様にランダムに生成する．
