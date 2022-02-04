@@ -1,3 +1,6 @@
+---
+mathjax:true
+---
 # NLGrad
 Online learning in Gradient method for Non-Linear model function.
 $\lambda$ is forgetting factor and the vale is set 0.5 as typical case.
