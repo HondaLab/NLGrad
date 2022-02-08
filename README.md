@@ -1,14 +1,12 @@
----
-mathjax:true
----
 # NLGrad
 Online learning in Gradient method for Non-Linear model function.
 $\lambda$ is forgetting factor and the vale is set 0.5 as typical case.
 
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS_CHTML"></script>
-
 
 $Q' = \lambda Q + (f(x_i)-y_i)^2$
+
+## nlgrad4b.py
+生成したデータをファイルに出力する
 
 ## nlgrad4a.py
 
