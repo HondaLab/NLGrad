@@ -8,6 +8,8 @@ $Q' = \lambda Q + (f(x_i)-y_i)^2$
 ## dist2b.py
 p(x,y)を求める
 
+<img src='https://github.com/HondaLab/NLGrad/blob/honda/pics/dist2b.png' width=600>
+
 ## dist2a.py
 x,yデータから分布関数p(x),p(y)を求める．
 
