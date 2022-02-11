@@ -62,9 +62,9 @@ def Make_bin(N,x_min,x_max,y_min,y_max):
 
 def Distribution(file_name,N_bin,x_bin,y_bin):
    fp=open(file_name,'r')
-   pop_x=[0]*(N_bin+1)
-   pop_y=[0]*(N_bin+1)
-   pop_xy=[[0]*(N_bin+1) for i in range(N_bin+1)]
+   pop_x=[0]*(N_bin)
+   pop_y=[0]*(N_bin)
+   pop_xy=[[0]*(N_bin) for i in range(N_bin)]
    cnt=0
    for line in fp:
       if line[0]!="#":
@@ -105,7 +105,7 @@ def Distribution(file_name,N_bin,x_bin,y_bin):
    #print("# Distribution ")
    dist_x=[0]*(N_bin+1)
    dist_y=[0]*(N_bin+1)
-   dist_xy=[[0]*(N_bin+1) for i in range(N_bin+1)]
+   dist_xy=[[0]*(N_bin) for i in range(N_bin)]
    integ_x=0.0
    integ_y=0.0
    integ_xy=0.0
@@ -133,19 +133,19 @@ if __name__=="__main__":
    N,x_min,x_max,y_min,y_max=Maxmin(DATA_FILE)
    N_bin,x_bin,y_bin,x_label,y_label=Make_bin(N,x_min,x_max,y_min,y_max)
    dist_x,dist_y,dist_xy=Distribution(DATA_FILE,N_bin,x_bin,y_bin)
-   show=[[0]*(N_bin+1) for i in range(N_bin+1)]
+   show=[[0]*(N_bin) for i in range(N_bin)]
 
    print("# Distribution ")
    print("#      x     p(x)        y     p(y)")
    integ_x=0.0
    integ_y=0.0
    integ_xy=0.0
-   for i in range(N_bin+1):
+   for i in range(N_bin):
       integ_x+=dist_x[i]
       integ_y+=dist_y[i]
       #print("%8.3f %8.5f " % (x_bin[i],dist_x[i]),end='')
       #print("%8.3f %8.5f " % (y_bin[i],dist_y[i]))
-      for j in range(N_bin+1):
+      for j in range(N_bin):
          integ_xy+=dist_xy[i][j]
          show[j][i]=dist_xy[i][j]
          #print("%8.3f %8.3f %8.5f " % (x_bin[i],y_bin[j],dist_xy[i][j]))
@@ -153,6 +153,8 @@ if __name__=="__main__":
 
    print("# Intg_x p(x)=%8.5f Intg_y p(y)=%8.5f Intg_xy p(x,y)=%8.5f" % (integ_x,integ_y,integ_xy))
  
+   y_label.pop()
+   x_label.pop()
    df=pd.DataFrame(data=show, index=y_label, columns=x_label)
    ax=sns.heatmap(df)
    ax.invert_yaxis()
