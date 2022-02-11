@@ -48,12 +48,12 @@ def func_b(x,alpha,beta,b):
    return f
 
 alpha_o=60.0
-beta_o=0.05
+beta_o=0.15
 b_o=270.0
 error=25.0
 eta=0.00001 # 学習係数
 lmbda=0.7 # 忘却係数
-N=1500    # データ数
+N=5000    # データ数
 
 fp=open(DATA_FILE,"a")
 fp_prm=open(PRM_FILE,"r")
@@ -77,8 +77,8 @@ py1=[]
 py2=[]
 
 dx=1
-x_min=b_o-500.0
-x_max=b_o+500.0
+x_min=b_o-100.0
+x_max=b_o+100.0
 Q=1.0
 Qalpha=0.0
 Qbeta=0.0
@@ -97,7 +97,7 @@ while i<=N:
    #e=2.0*(random.random()-0.5)*error
    y=func(x,alpha_o,beta_o,b_o)
    y2=y+e # as data
-   fp.write("%10.4f %10.4f \n" % (x,y2))
+   fp.write("%10.4f, %10.4f \n" % (x,y2))
 
    px.append(x)
    py1.append(y)
