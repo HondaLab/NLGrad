@@ -125,7 +125,6 @@ def Distribution(file_name,N_bin,x_bin,y_bin):
 
 if __name__=="__main__":
    import matplotlib.pyplot as plt
-   from matplotlib.ticker import FormatStrFormatter
    import pandas as pd
    import seaborn as sns
 
