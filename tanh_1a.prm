@@ -1,7 +1,6 @@
 #   alpha,    beta,       b,        Q 
        50,     1.0,     200, 10000000, initial
 #   alpha,    beta,       b,        Q 
-#   alpha,    beta,       b,        Q 
    60.934,    0.075,  271.031,  159.112,  best 
    58.263,    0.511,  260.131,  394.293,  current
 #   alpha,    beta,       b,        Q 

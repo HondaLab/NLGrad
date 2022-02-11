@@ -5,6 +5,9 @@ $\lambda$ is forgetting factor and the vale is set 0.5 as typical case.
 
 $Q' = \lambda Q + (f(x_i)-y_i)^2$
 
+## dist2b.py
+p(x,y)を求める
+
 ## dist2a.py
 x,yデータから分布関数p(x),p(y)を求める．
 
