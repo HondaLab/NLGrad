@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import numpy as np
 import random
 import matplotlib.pyplot as plt

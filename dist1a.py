@@ -1,8 +1,9 @@
+#!/usr/bin/python3
 import numpy as np
 
-READ_FILE="data_normal_1a.xy"
+DATA_FILE="data_normal_1a.xy"
 
-fp=open(READ_FILE,'r')
+fp=open(DATA_FILE,'r')
 cnt=0
 for line in fp:
    if line[0]!="#":
@@ -48,7 +49,7 @@ for i in range(bin_N):
 y_bin.append(y_max)
 #print(y_bin)
 
-fp=open(READ_FILE,'r')
+fp=open(DATA_FILE,'r')
 pop_x=[0]*(bin_N+1)
 pop_y=[0]*(bin_N+1)
 cnt=0
