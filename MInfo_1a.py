@@ -141,7 +141,7 @@ if __name__=="__main__":
    import pandas as pd
    import seaborn as sns
 
-   DATA_FILE="data_normal_2a.xy"
+   DATA_FILE="data_normal_1a.xy"
    print("# In '%s'" % DATA_FILE)
    N,x_min,x_max,y_min,y_max=Maxmin(DATA_FILE)
    N_bin,x_bin,y_bin,x_label,y_label=Make_bin(N,x_min,x_max,y_min,y_max)
@@ -177,5 +177,5 @@ if __name__=="__main__":
    plt.xlabel('x')
    plt.ylabel('y')
    plt.tight_layout()
-   plt.savefig('pics/dist2c.png')
+   plt.savefig('pics/XYdist_1a.png')
    #plt.show()
