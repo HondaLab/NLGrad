@@ -23,13 +23,18 @@ x,yデータから分布関数p(x),p(y)を求める．
 ## nlgrad4a.py
 勾配法
 Q'_alpha = lambda*Q_alpha -2(y_i-f(x_i))*df/d alpha
+
 Q'_beta = lambda*Q_beta -2(y_i-f(x_i))*df/d beta
+
 Q'_b = lambda*Q_b -2(y_i-f(x_i))*df/d b
 
 
 alpha'=alpha-|alpha|*eta*Q_alpha
+
 beta'=beta-|beta|*eta*Q_beta
+
 b'=b-|b|*eta*Q_b
+
 
 <img src='https://github.com/HondaLab/NLGrad/blob/honda/pics/sample4a.png' width=600>
 
