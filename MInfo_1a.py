@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# dist2a.py: Let each process put in function
+# "MInfo_1a.py" calculates the mutual information between "x" adn "y".
 import numpy as np
 
 def Maxmin(file_name):
@@ -123,7 +123,7 @@ def Distribution(file_name,N_bin,x_bin,y_bin):
    #print("%12.7f %12.7f %12.7f" % (integ_x,integ_y,integ_xy))
    return dist_x,dist_y,dist_xy
 
-def Info(dist_x,dist_y,dist_xy,N_bin):
+def MInfo(dist_x,dist_y,dist_xy,N_bin): # 相互情報量
    eps=10e-10
    I=0.0
    for i in range(N_bin):
@@ -165,7 +165,7 @@ if __name__=="__main__":
       #print("\n")
 
    print("# Intg_x p(x)=%8.5f Intg_y p(y)=%8.5f Intg_xy p(x,y)=%8.5f" % (integ_x,integ_y,integ_xy))
-   I=Info(dist_x,dist_y,dist_xy,N_bin)
+   I=MInfo(dist_x,dist_y,dist_xy,N_bin)
    print("I(X;Y)=%8.5f" % I)
  
    y_label.pop() # bin_max を削除
