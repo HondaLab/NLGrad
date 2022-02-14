@@ -5,6 +5,9 @@ $\lambda$ is forgetting factor and the vale is set 0.5 as typical case.
 
 $Q' = \lambda Q + (f(x_i)-y_i)^2$
 
+## dist2c.py
+相互情報量 = sum_{xy} p(x,y) log p(x,y)/(p(x)p(y))
+
 ## dist2b.py
 p(x,y)を求める
 
@@ -12,6 +15,7 @@ p(x,y)を求める
 
 ## dist2a.py
 x,yデータから分布関数p(x),p(y)を求める．
+
 
 ## nlgrad4b.py
 生成したデータをファイルに出力する

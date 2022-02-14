@@ -4,7 +4,7 @@ import random
 import matplotlib.pyplot as plt
 import matplotlib
 
-DATA_FILE="data_normal_1a.xy"
+DATA_FILE="data_normal_2a.xy"
 PRM_FILE="tanh_1a.prm"
 
 
@@ -94,7 +94,7 @@ i=1
 while i<=N:
    x=x_min+random.random()*(x_max-x_min)
    #x=np.random.normal(b_o,40,1)
-   e=np.random.normal(0,0.3*alpha_o,1) # 誤差を正規分布で生成
+   e=np.random.normal(0,0.001*alpha_o,1) # 誤差を正規分布で生成
    #e=2.0*(random.random()-0.5)*error
    y=func(x,alpha_o,beta_o,b_o)
    y2=y+e # as data
